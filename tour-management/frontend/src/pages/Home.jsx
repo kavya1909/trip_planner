@@ -7,6 +7,7 @@ import heroVideo from '../assets/images/hero-video.mp4'
 import worldImg from '../assets/images/world.png'
 import Subtitle from '../shared/Subtitle';
 
+import SearchBar from '../shared/SearchBar';
 const Home = () => {
   return <>
   <section>
@@ -25,10 +26,26 @@ const Home = () => {
               </span>
             </h1>
             <p>
-              ahhhahsdiukfjasdiukfjhasd
+            "Embark on unforgettable journeys with our intuitive trip planner! Explore the world hassle-free as our user-friendly platform simplifies the intricate process of crafting your dream itinerary. Whether you crave cultural escapades, scenic wonders, or thrilling adventures, our website transforms your travel aspirations into seamless reality. Browse curated destinations, discover hidden gems, and personalize your trip effortlessly."
             </p>
           </div>
         </Col>
+        <Col lg='2'>
+          <div className='hero__img-box'>
+            <img src ={heroImg} alt = ""></img>
+          </div>
+        </Col>
+        <Col lg='2'>
+          <div className='hero__img-box mt-4'>
+            <video src ={heroVideo} alt = "" controls></video>
+          </div>
+        </Col >
+        <Col lg='2'>
+          <div className='hero__img-box mt-5'>
+            <img src ={heroImg02} alt = ""></img>
+          </div>
+        </Col>
+        <SearchBar/>
       </Row>
     </Container>
   </section>
