@@ -1,11 +1,18 @@
 import React from 'react'
 
-
-
+import TourCard from '../../shared/TourCard';
+import tourData from '../../assets/data/tours';
+import {Col} from 'reactstrap';
 export default function FeaturedTourList() {
   return (
-    <div>
-      
-    </div>
+    <>
+    {
+      tourData?.map(tour=>(
+        <Col lg='3' className="mb-4" key={tour.id}>
+          <TourCard tour={tour}/>
+        </Col>
+      ))
+    }
+    </>
   )
 }
