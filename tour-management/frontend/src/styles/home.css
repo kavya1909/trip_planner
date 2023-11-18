@@ -110,3 +110,18 @@
     width: 90%;
     
 }
+.gallery__title{
+    font-size: 2.3rem;
+    margin-bottom: 2.5rem;
+    margin-top: 1rem;
+}
+.masonry__img{
+    transition: .3s;
+}
+.masonry__img:hover{
+    transform:scale(1.03) ;
+}
+.testimonial__title{
+    font-size: 2.3rem;
+    margin-top: 1rem;
+}
