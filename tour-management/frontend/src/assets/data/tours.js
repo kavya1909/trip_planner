@@ -20,6 +20,14 @@ const tours = [
         name: "jhon doe",
         rating: 4.6,
       },
+      {
+        name: "Kavya Patel",
+        rating: 4.2,
+      },
+      {
+        name: "Dhruv Thakkar",
+        rating: 3.7,
+      },
     ],
     avgRating: 4.5,
     photo: tourImg01,
@@ -124,10 +132,7 @@ const tours = [
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
-      {
-        name: "jhon doe",
-        rating: 4.6,
-      },
+
     ],
     avgRating: 4.5,
     photo: tourImg07,
@@ -142,10 +147,6 @@ const tours = [
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
-      {
-        name: "jhon doe",
-        rating: 4.6,
-      },
     ],
     avgRating: 4.5,
     photo: tourImg03,

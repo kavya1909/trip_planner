@@ -9,6 +9,9 @@ import Subtitle from '../shared/Subtitle';
 import FeaturedTourList from '../components/Featured-tours/FeaturedTourList';
 import SearchBar from '../shared/SearchBar';
 import ServiceList from '../services/ServiceList';
+
+
+import experienceImg from '../assets/images/experience.png'
 const Home = () => {
   return <>
   <section>
@@ -77,6 +80,45 @@ const Home = () => {
           <h2 className='feature__tour-title'>Our featured tours</h2>
         </Col>
         <FeaturedTourList/>
+      </Row>
+    </Container>
+  </section>
+
+
+  {/* experience section start */}
+  <section>
+    <Container>
+      <Row>
+        <Col lg='6'>
+          <div className='experience__content'>
+            <Subtitle subtitle={'Experience'}></Subtitle>
+            <h2>With our all experience <br></br> we will serve you</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptates dolor tenetur veniam, rem quaiure!
+              <br></br>reiciendis nihil error aut in voluptatum. Earum adipisci consequatur fugit placeat doloribus odit in
+            </p>
+          </div>
+          
+          <div className="counter__wrapper d-flex align items-center gap-5">
+            <div className="counter__box">
+              <span>12k+</span>
+              <h6>Successfull Trip</h6>
+            </div>
+            <div className="counter__box">
+              <span>2k+</span>
+              <h6>Regular clients</h6>
+            </div>
+            <div className="counter__box">
+              <span>5</span>
+              <h6>Years experience</h6>
+            </div>
+          </div>
+        </Col>
+        <Col lg='6'>
+          <div>
+            <img src={experienceImg} alt=''/>
+          </div>
+        </Col>
       </Row>
     </Container>
   </section>
