@@ -12,6 +12,8 @@ import ServiceList from '../services/ServiceList';
 import Testimonial from '../components/Testimonial/Testimonial';
 import MasonryImagesGallery from '../components/Image-gallery/MasonryImagesGallery';
 import experienceImg from '../assets/images/experience.png'
+import Newsletter from '../shared/Newsletter';
+
 const Home = () => {
   return <>
   <section>
@@ -149,6 +151,8 @@ const Home = () => {
       </Row>
     </Container>
   </section>
+
+  <Newsletter/>
   
   </>
 }
