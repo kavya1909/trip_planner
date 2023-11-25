@@ -8,7 +8,9 @@ import Newsletter from './../shared/Newsletter'
 import { Container, Row, Col } from 'reactstrap';
 
 const Tours = () => {
+  // const [pageCount, setPageCount]
   return (
+    
     <>
       <CommonSection title={"All Tours"}/>
       <section>
