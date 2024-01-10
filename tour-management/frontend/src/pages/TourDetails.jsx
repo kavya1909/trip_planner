@@ -10,7 +10,7 @@ import BOoking from '../components/Booking/B0oking';
 const TourDetails = () => {
   const {id} = useParams();
   const reviewMsgRef=useRef('')
-  const {tourRating,setTourRating}=useState(null)
+  const [tourRating,setTourRating]=useState(null)
   const tour = tourData.find(tour=>tour.id === id);
   const {photo, title, desc, price,address, reviews, city, distance, maxGroupSize} = tour;
   const {totalRating,avgRating}=calculateAvgRating(reviews);
@@ -19,10 +19,10 @@ const TourDetails = () => {
 
 
   const submitHandler = e=>{
-    e.prefectDefault()
+    e.preventDefault()
     const reviewText = reviewMsgRef.current.value;
-    // alert(`${reviewText}, ${tourRating}`);
-
+    alert(`${reviewText}, ${tourRating}`);
+  
     //later will call api
   }
 
