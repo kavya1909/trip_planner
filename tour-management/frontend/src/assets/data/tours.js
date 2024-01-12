@@ -20,15 +20,15 @@ const tours = [
     reviews: [
       {
         name: "jhon doe",
-        rating: 4.6,
+        rating: 0.6,
       },
       {
         name: "Kavya Patel",
-        rating: 4.2,
+        rating: 0.2,
       },
       {
         name: "Dhruv Thakkar",
-        rating: 3.7,
+        rating: 0.7,
       },
     ],
     avgRating: 4.5,

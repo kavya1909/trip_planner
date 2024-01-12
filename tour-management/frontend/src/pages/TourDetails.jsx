@@ -6,11 +6,12 @@ import tourData from '../assets/data/tours';
 import avatar from '../assets/images/avatar.jpg'
 import calculateAvgRating from './../utils/avgRating';
 import BOoking from '../components/Booking/B0oking';
+import Newsletter from '../shared/Newsletter';
 
 const TourDetails = () => {
   const {id} = useParams();
   const reviewMsgRef=useRef('')
-  const {tourRating,setTourRating}=useState(null)
+  const [tourRating,setTourRating]=useState(null)
   const tour = tourData.find(tour=>tour.id === id);
   const {photo, title, desc, price,address, reviews, city, distance, maxGroupSize} = tour;
   const {totalRating,avgRating}=calculateAvgRating(reviews);
@@ -19,10 +20,10 @@ const TourDetails = () => {
 
 
   const submitHandler = e=>{
-    e.prefectDefault()
+    e.preventDefault()
     const reviewText = reviewMsgRef.current.value;
-    // alert(`${reviewText}, ${tourRating}`);
-
+    alert(`${reviewText}, ${tourRating}`);
+  
     //later will call api
   }
 
@@ -122,6 +123,7 @@ const TourDetails = () => {
       </Row>
     </Container>
   </section>
+  <Newsletter/>
   </>
 }
 
