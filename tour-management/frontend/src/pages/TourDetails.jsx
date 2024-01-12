@@ -6,6 +6,7 @@ import tourData from '../assets/data/tours';
 import avatar from '../assets/images/avatar.jpg'
 import calculateAvgRating from './../utils/avgRating';
 import BOoking from '../components/Booking/B0oking';
+import Newsletter from '../shared/Newsletter';
 
 const TourDetails = () => {
   const {id} = useParams();
@@ -122,6 +123,7 @@ const TourDetails = () => {
       </Row>
     </Container>
   </section>
+  <Newsletter/>
   </>
 }
 

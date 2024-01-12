@@ -1,9 +1,12 @@
 import React,{useState} from 'react';
 import { Form, FormGroup, ListGroup, ListGroupItem, Button } from 'reactstrap'
 import './booking.css'
+
+import { useNavigate } from 'react-router-dom';
+
 const B0oking = ({tour, avgRating}) => {
     const {price, reviews} = tour;
-
+    const navigate = useNavigate();
     const [credentials, setCredentials] = useState ({
       userId: '01',
       userEmail: 'example@gmail.com',
@@ -16,12 +19,14 @@ const B0oking = ({tour, avgRating}) => {
     const handleChange = e => {
       setCredentials(prev=>({...prev, [e.target.id]:e.target.value}))
     };
+
+    const serviceFee = 10;
+    const totalAmount = Number(price) * Number(credentials.guestSize) + Number(serviceFee);
     const handleClick=e=>{
       e.preventDefault();
-      console.log(credentials);
+      navigate('/thank-you');
     }
 
- 
 
     return (
     <div className='booking'>
@@ -59,7 +64,7 @@ const B0oking = ({tour, avgRating}) => {
 
         </Form>
       </div>
-      <div className="booking__bottom">
+      <div className="booking__bottom">0
         <ListGroup>
           <ListGroupItem className='border-0 px-0'>
             <h5 className='d-flex align-items-center gap-1'>${price}<i class='ri-close-line'></i>1 person</h5>
@@ -67,16 +72,18 @@ const B0oking = ({tour, avgRating}) => {
           </ListGroupItem>
           <ListGroupItem className='border-0 px-0'>
             <h5>Service charge</h5>
-            <span> $10</span>
+            <span> ${serviceFee}</span>
           </ListGroupItem>
           <ListGroupItem className='border-0 px-0 total'>
             <h5>Total</h5>
-            <span> $109</span>
+            <span> ${totalAmount}</span>
            </ListGroupItem>
         </ListGroup>
 
 
-        <Button className='btn primary__btn w-100 mt-4' onClick={handleClick}>Button Now</Button>
+
+
+        <Button className='btn primary__btn w-100 mt-4' onClick={handleClick}>Book Now</Button>
       </div>
      </div>
     );
